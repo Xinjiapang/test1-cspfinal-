@@ -43,7 +43,9 @@ let brain;
 
 let state = 'waiting';
 var targetLabel;
-let classifiposes;
+
+let classfiedposes; //first player pose
+let otherPlayerPose; //second player pose
 
 let goalX=170;
 let goalY=90;
@@ -350,27 +352,54 @@ function brainLoaded() {
   classifyPose();
 }
 
+//classify first player poses
 function classifyPose() {
-  if (pose) {
+  if (classfiedposes) {
     let inputs = [];
-    for (let i = 0; i < pose.keypoints.length; i++) {
-      let x = pose.keypoints[i].position.x;
-      let y = pose.keypoints[i].position.y;
+    for (let i = 0; i < classfiedposes.keypoints.length; i++) {
+      let x = classfiedposes.keypoints[i].position.x;
+      let y = classfiedposes.keypoints[i].position.y;
       inputs.push(x);
       inputs.push(y);
     }
-    brain.classify(inputs, gotResult);
+    brain.classify(inputs, gotPlayerResult);
   } else {
     setTimeout(classifyPose, 1000);
   }
 }
 
-function gotResult(error, results) {
+//classify second player poses
+function classifyOtherPlayerPose() {
+  if (otherPlayerPose) {
+    let inputs = [];
+    for (let i = 0; i < otherPlayerPose.keypoints.length; i++) {
+      let x = otherPlayerPose.keypoints[i].position.x;
+      let y = otherPlayerPose.keypoints[i].position.y;
+      inputs.push(x);
+      inputs.push(y);
+    }
+    brain.classify(inputs, gotOtherPlayerResult);
+  } else {
+    setTimeout(classifyOtherPlayerPose, 1000);
+  }
+}
+
+//got first player poses result
+function gotPlayerResult(error, results) {
   // console.log(results);
   // console.log(results[0].label);
-  poses = results;
+  classfiedposes = results;
   classifyPose();
 }
+
+//got second player poses result
+function gotOtherPlayerResult(error, results) {
+  // console.log(results);
+  // console.log(results[0].label);
+  otherPlayerPose = results;
+  classifyPose();
+}
+
 
 function dataReady() {
   brain.normalizeData();
@@ -607,70 +636,69 @@ player2Match = false;
 
 function twopeople() {
   if (pose) {
-    if (classifiedposes && classifiedposes.length > 0) {
+    if (poses && poses.length >= 2) {
 //   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
-    var p1pose = classiedposes[0];
-    var p2pose = classifiedOtherPlayerPoses[0];
+    player1 = poses[0];
+    otherPlayerPose = poses[1];
   } else {
-    var p1pose = classifiedOtherPlayerPoses[0];
-    var p2pose = classifierposes[0];  
+    player1 = poses[1]
+    otherPlayerPose = poses[0];
   }
-      
-   if (p1pose.label == "t") {
+   if (player1.label == "t") {
       let s1 = new shape(30, 290, "T", 20);
       s1.display();
     }
-    if (p2pose.label == "t") {
+    if (otherPlayerPose.label == "t") {
       let s1 = new shape(490, 290, "T", 20);
       s1.display();
     }
 
-    if (p1pose.label == 'i') {
+    if (player1.label == 'i') {
       let s2 = new shape(30, 290, "I", 20);
       s2.display();
     }
-    if (p2pose.label == 'i') {
+    if (otherPlayerPose.label == 'i') {
       let s2 = new shape(490, 290, "I", 20);
       s2.display();
     }
 
-    if (p1pose.label == 'a') {
+    if (player1.label == 'a') {
       let s3 = new shape(30, 290, "A", 20);
       s3.display();
     }
-    if (p2pose.label == 'a') {
+    if (otherPlayerPose.label == 'a') {
       let s3 = new shape(490, 290, "A", 20);
       s3.display();
     }
 
-    if (p1pose.label == 'o') {
+    if (player1.label == 'o') {
       let s4 = new shape(30, 290, "O", 20);
       s4.display();
     }
 
-    if (p2pose.label == 'o') {
+    if (otherPlayerPose.label == 'o') {
 
       let s4 = new shape(490, 290, "O", 20);
       s4.display();
     }
 
-    if (p1pose.label == 'l') {
+    if (player1.label == 'l') {
       let s5 = new shape(30, 290, "L", 20);
       s5.display();
     }
 
-    if (p2pose.label == 'l') {
+    if (otherPlayerPose.label == 'l') {
       let s5 = new shape(490, 290, "L", 20);
       s5.display();
     }
 
-    if (p1pose.label == 'f') {
+    if (player1.label == 'f') {
       let s6 = new shape(30, 290, "F", 20);
       s6.display();
     }
 
-    if (p2pose.label == 'f') {
+    if (otherPlayerPose.label == 'f') {
       let s6 = new shape(490, 290, "F", 20);
       s6.display();
     }
