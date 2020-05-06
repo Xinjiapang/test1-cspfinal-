@@ -45,7 +45,7 @@ let state = 'waiting';
 var targetLabel;
 
 let classfiedposes; //first player pose
-let otherPlayerPose; //second player pose
+let classifiedOtherPlayerPoses; //second player pose
 
 let goalX=170;
 let goalY=90;
