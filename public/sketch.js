@@ -397,8 +397,8 @@ function classifyOtherPlayerPose() {
 function gotOtherPlayerResult(error, results) {
   // console.log(results);
   // console.log(results[0].label);
-  classifyOtherPlayerPose = results;
-  classifyPose();
+  otherPlayerPose = results;
+  classifyOtherPlayerPose();
 }
 
 
