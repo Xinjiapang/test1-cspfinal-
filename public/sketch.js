@@ -636,69 +636,69 @@ player2Match = false;
 
 function twopeople() {
   if (pose) {
-    if (poses && poses.length >= 2) {
+    if (classifiedposes && classifiedposes.length > 0) {
 //   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
-    player1 = poses[0];
-    otherPlayerPose = poses[1];
+    var p1pose = classiedposes[0];
+    var p2pose = classifiedOtherPlayerPoses[0];
   } else {
-    player1 = poses[1]
-    otherPlayerPose = poses[0];
+    var p1pose = classifiedOtherPlayerPoses[0];
+    var p2pose = classifierposes[0];  
   }
-   if (player1.label == "t") {
+   if (p1pose.label == "t") {
       let s1 = new shape(30, 290, "T", 20);
       s1.display();
     }
-    if (otherPlayerPose.label == "t") {
+    if (p2pose.label == "t") {
       let s1 = new shape(490, 290, "T", 20);
       s1.display();
     }
 
-    if (player1.label == 'i') {
+    if (p1pose.label == 'i') {
       let s2 = new shape(30, 290, "I", 20);
       s2.display();
     }
-    if (otherPlayerPose.label == 'i') {
+    if (p2pose.label == 'i') {
       let s2 = new shape(490, 290, "I", 20);
       s2.display();
     }
 
-    if (player1.label == 'a') {
+    if (p1pose.label == 'a') {
       let s3 = new shape(30, 290, "A", 20);
       s3.display();
     }
-    if (otherPlayerPose.label == 'a') {
+    if (p2pose.label == 'a') {
       let s3 = new shape(490, 290, "A", 20);
       s3.display();
     }
 
-    if (player1.label == 'o') {
+    if (p1pose.label == 'o') {
       let s4 = new shape(30, 290, "O", 20);
       s4.display();
     }
 
-    if (otherPlayerPose.label == 'o') {
+    if (p2pose.label == 'o') {
 
       let s4 = new shape(490, 290, "O", 20);
       s4.display();
     }
 
-    if (player1.label == 'l') {
+    if (p1pose.label == 'l') {
       let s5 = new shape(30, 290, "L", 20);
       s5.display();
     }
 
-    if (otherPlayerPose.label == 'l') {
+    if (p2pose.label == 'l') {
       let s5 = new shape(490, 290, "L", 20);
       s5.display();
     }
 
-    if (player1.label == 'f') {
+    if (p1pose.label == 'f') {
       let s6 = new shape(30, 290, "F", 20);
       s6.display();
     }
 
-    if (otherPlayerPose.label == 'f') {
+    if (p2pose.label == 'f') {
       let s6 = new shape(490, 290, "F", 20);
       s6.display();
     }
