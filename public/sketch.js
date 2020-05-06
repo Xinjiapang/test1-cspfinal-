@@ -44,7 +44,7 @@ let brain;
 let state = 'waiting';
 var targetLabel;
 
-let classfiedposes; //first player pose
+let classifiedposes; //first player pose
 let classifiedOtherPlayerPoses; //second player pose
 
 let goalX=170;
@@ -355,11 +355,11 @@ function brainLoaded() {
 
 //classify first player poses
 function classifyPose() {
-  if (classfiedposes) {
+  if (classifiedposes) {
     let inputs = [];
-    for (let i = 0; i < classfiedposes.keypoints.length; i++) {
-      let x = classfiedposes.keypoints[i].position.x;
-      let y = classfiedposes.keypoints[i].position.y;
+    for (let i = 0; i < classifiedposes.keypoints.length; i++) {
+      let x = classifiedposes.keypoints[i].position.x;
+      let y = classifiedposes.keypoints[i].position.y;
       inputs.push(x);
       inputs.push(y);
     }
@@ -373,7 +373,7 @@ function classifyPose() {
 function gotPlayerResult(error, results) {
   // console.log(results);
   // console.log(results[0].label);
-  classfiedposes = results;
+  classifiedposes = results;
   classifyPose();
 }
 
