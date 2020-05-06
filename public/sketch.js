@@ -350,6 +350,7 @@ function setup() {
 function brainLoaded() {
   console.log('classification is ready!');
   classifyPose();
+  classifyOtherPlayerPose() 
 }
 
 //classify first player poses
@@ -637,7 +638,7 @@ player2Match = false;
 
 function twopeople() {
     if (classifiedposes && classifiedposes.length > 0) {
-//   for (let i = 0; i < poses.length; i++) {
+      if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length>0){
   if (myPlayer == 1) {
     var p1pose = classiedposes[0];
     var p2pose = classifiedOtherPlayerPoses[0];
@@ -702,5 +703,6 @@ function twopeople() {
       let s6 = new shape(490, 290, "F", 20);
       s6.display();
   }
+      }
 }
 }
