@@ -380,11 +380,11 @@ function gotPlayerResult(error, results) {
 
 //classify second player poses
 function classifyOtherPlayerPose() {
-  if (otherPlayerPose) {
+  if (classifiedOtherPlayerPoses) {
     let inputs = [];
-    for (let i = 0; i < otherPlayerPose.keypoints.length; i++) {
-      let x = otherPlayerPose.keypoints[i].position.x;
-      let y = otherPlayerPose.keypoints[i].position.y;
+    for (let i = 0; i < classifiedOtherPlayerPoses.keypoints.length; i++) {
+      let x = classifiedOtherPlayerPoses.keypoints[i].position.x;
+      let y = classifiedOtherPlayerPoses.keypoints[i].position.y;
       inputs.push(x);
       inputs.push(y);
     }
@@ -398,7 +398,7 @@ function classifyOtherPlayerPose() {
 function gotOtherPlayerResult(error, results) {
   // console.log(results);
   // console.log(results[0].label);
-  otherPlayerPose = results;
+  classifiedOtherPlayerPoses = results;
   classifyOtherPlayerPose();
 }
 
@@ -638,7 +638,7 @@ player2Match = false;
 
 function twopeople() {
     if (classifiedposes && classifiedposes.length > 0) {
-      if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length>0){
+      if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length > 0){
   if (myPlayer == 1) {
     var p1pose = classiedposes[0];
     var p2pose = classifiedOtherPlayerPoses[0];
