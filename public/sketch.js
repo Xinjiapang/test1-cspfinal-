@@ -491,7 +491,7 @@ function draw() {
   frame();
   showgoal();
   rounds();
-  wingame();
+//   wingame();
   twopeople();
   pop();
   
