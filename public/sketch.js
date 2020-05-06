@@ -355,11 +355,11 @@ function brainLoaded() {
 
 //classify first player poses
 function classifyPose() {
-  if (classifiedposes) {
+  if (pose) {
     let inputs = [];
-    for (let i = 0; i < classifiedposes.keypoints.length; i++) {
-      let x = classifiedposes.keypoints[i].position.x;
-      let y = classifiedposes.keypoints[i].position.y;
+    for (let i = 0; i < pose.keypoints.length; i++) {
+      let x = pose.keypoints[i].position.x;
+      let y = pose.keypoints[i].position.y;
       inputs.push(x);
       inputs.push(y);
     }
@@ -380,11 +380,11 @@ function gotPlayerResult(error, results) {
 
 //classify second player poses
 function classifyOtherPlayerPose() {
-  if (classifiedOtherPlayerPoses) {
+  if (otherPlayerPose) {
     let inputs = [];
-    for (let i = 0; i < classifiedOtherPlayerPoses.keypoints.length; i++) {
-      let x = classifiedOtherPlayerPoses.keypoints[i].position.x;
-      let y = classifiedOtherPlayerPoses.keypoints[i].position.y;
+    for (let i = 0; i < otherPlayerPose.keypoints.length; i++) {
+      let x = otherPlayerPose.keypoints[i].position.x;
+      let y = otherPlayerPose.keypoints[i].position.y;
       inputs.push(x);
       inputs.push(y);
     }
@@ -640,11 +640,11 @@ function twopeople() {
     if (classifiedposes && classifiedposes.length > 0) {
       if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length > 0){
   if (myPlayer == 1) {
-    var p1pose = classiedposes[0];
+    var p1pose = classifiedposes[0];
     var p2pose = classifiedOtherPlayerPoses[0];
   } else {
     var p1pose = classifiedOtherPlayerPoses[0];
-    var p2pose = classifierposes[0];  
+    var p2pose = classifiedposes[0];  
   }
    if (p1pose.label == "t") {
       let s1 = new shape(30, 290, "T", 20);
