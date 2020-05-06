@@ -368,6 +368,15 @@ function classifyPose() {
   }
 }
 
+//got first player poses result
+function gotPlayerResult(error, results) {
+  // console.log(results);
+  // console.log(results[0].label);
+  classfiedposes = results;
+  classifyPose();
+}
+
+
 //classify second player poses
 function classifyOtherPlayerPose() {
   if (otherPlayerPose) {
@@ -384,19 +393,11 @@ function classifyOtherPlayerPose() {
   }
 }
 
-//got first player poses result
-function gotPlayerResult(error, results) {
-  // console.log(results);
-  // console.log(results[0].label);
-  classfiedposes = results;
-  classifyPose();
-}
-
 //got second player poses result
 function gotOtherPlayerResult(error, results) {
   // console.log(results);
   // console.log(results[0].label);
-  otherPlayerPose = results;
+  classifyOtherPlayerPose = results;
   classifyPose();
 }
 
