@@ -12,7 +12,7 @@
   };
 
   function init() {
-    socket = new WebSocket(`wss://${window.location.host}/${tp.id || ''}`);
+    socket = new WebSocket(`ws://${window.location.host}/${tp.id || ''}`);
     socket.addEventListener('close', () => {
       setTimeout(init, 1000+2000*random());
     });
