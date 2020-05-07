@@ -620,7 +620,9 @@ player1Match = true;
 if (p2pose.label == answer2){
 player2Match = true;
 }
-
+print(player1Match);
+print(player2Match);
+        
 if (player1Match && player2Match){
 j++;
 timeValue=0;
@@ -629,8 +631,6 @@ player2Match = false;
 }
 } 
 }
-print(player1Match);
-print(player2Match);
 }
 
 function twopeople() {
