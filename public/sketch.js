@@ -24,7 +24,7 @@ let goalblocksize=60;
 let s = 20;
 let x = 350;
 var startB; // the buttons
-var timerValue = 10;
+var timerValue = 50;
 let x1 = 20;
 let y1 = 270;
 let x2 = 480;
