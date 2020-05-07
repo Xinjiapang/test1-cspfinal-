@@ -599,10 +599,10 @@ function goal(){
 
 function wingame(){
 
-answer1 = a[0];
-answer2 = a[1];
-player1Match = false;
-player2Match = false;
+var answer1 = a[0];
+var answer2 = a[1];
+var player1Match = false;
+var player2Match = false;
   
  if (classifiedposes && classifiedposes.length > 0) {
       if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length > 0){
@@ -620,8 +620,7 @@ player1Match = true;
 if (p2pose.label == answer2){
 player2Match = true;
 }
-print(player1Match);
-print(player2Match);
+print("player1Match","player2Match");
 print(classifiedposes[0]);
 print(classifiedOtherPlayerPoses[0]);
 print(answer1);
@@ -706,6 +705,6 @@ function twopeople() {
   }
       }
 }
-  print(p2pose);
-  print(p1pose);
+//   print(p2pose);
+//   print(p1pose);
 }
