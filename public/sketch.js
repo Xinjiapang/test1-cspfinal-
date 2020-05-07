@@ -53,11 +53,6 @@ let goalY=90;
 var ontheright;
 var ontheleft;
 
-let player1;
-let player2;
-player1Match = false;
-player2Match = false;
-
 function keyPressed() {
   // if (key == 't') {
   //   brain.normalizeData();
@@ -606,22 +601,23 @@ function wingame(){
 
 answer1 = a[0];
 answer2 = a[1];
-
- if (pose) {
-    if (poses && poses.length >= 2) {
-//   for (let i = 0; i < poses.length; i++) {
+player1Match = false;
+player2Match = false;
+  
+ if (classifiedposes && classifiedposes.length > 0) {
+      if(classifiedOtherPlayerPoses && classifiedOtherPlayerPoses.length > 0){
   if (myPlayer == 1) {
-    player1 = poses[0];
-    otherPlayerPose = poses[1];
+    var p1pose = classifiedposes[0];
+    var p2pose = classifiedOtherPlayerPoses[0];
   } else {
-    player1 = poses[1]
-    otherPlayerPose = poses[0];
+    var p1pose = classifiedOtherPlayerPoses[0];
+    var p2pose = classifiedposes[0];  
   }
-if (player1.label == answer1){
+if (p1pose.label == answer1){
 player1Match = true;
 }
 
-if (otherPlayerPose.label == answer2){
+if (p2pose.label == answer2){
 player2Match = true;
 }
 
@@ -633,7 +629,6 @@ player2Match = false;
 }
 } 
 }
-
 }
 
 function twopeople() {
