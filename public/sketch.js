@@ -331,11 +331,9 @@ function setup() {
       myPlayer = 2;
       TwoPlayer.send("player2");
       document.getElementById('message').innerText = "Connected!"
-      frame();
     } else if (message == "player2") {
       myPlayer = 1;
       document.getElementById('message').innerText = "Connected!"
-      frame();
     } else {
       let data = JSON.parse(message);
       otherPlayerPose = data.pose;
@@ -485,7 +483,7 @@ function draw() {
   image(video, 0, 0, video.width, video.height);
   filter(GRAY);
   goal()
-//   frame();
+  frame();
   showgoal();
   rounds();
   wingame();
