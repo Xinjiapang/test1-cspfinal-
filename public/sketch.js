@@ -629,6 +629,8 @@ player2Match = false;
 }
 } 
 }
+print(player1Match);
+print(player2Match);
 }
 
 function twopeople() {
