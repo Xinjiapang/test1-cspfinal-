@@ -705,4 +705,5 @@ function twopeople() {
   }
       }
 }
+print();
 }
