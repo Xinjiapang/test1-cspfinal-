@@ -454,7 +454,7 @@ function frame() {
   text('TIME', 20, 40);
 
   textSize(20);
-  fill(0);
+  fill(255);
   noStroke();
   if (timerValue < 10) {
     text("0:0" + timerValue, 20, 70);
