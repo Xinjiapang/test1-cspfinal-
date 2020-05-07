@@ -582,7 +582,7 @@ function people2() {
   textSize(16);
   fill(0, 102, 153);
   noStroke();
-  text('Player 1', 480, y1);
+  text('Player 2', 480, y1);
 
   stroke(100);
   noFill();
