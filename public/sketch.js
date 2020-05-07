@@ -705,6 +705,6 @@ function twopeople() {
   }
       }
 }
-  print(p2pose.label);
-  print(p1pose.label);
+  print(p2pose);
+  print(p1pose);
 }
