@@ -444,7 +444,7 @@ function frame() {
   }
 
   textSize(16);
-  fill(200);
+  fill(255);
   noStroke();
   text('TIME', 20, 40);
 
@@ -461,7 +461,7 @@ function frame() {
   // }
 
   textSize(16);
-  fill(200);
+  fill(255);
   noStroke();
   text('SCORE', 110, 40);
   text(j,180,40);
