@@ -24,7 +24,7 @@ let goalblocksize=60;
 let s = 20;
 let x = 350;
 var startB; // the buttons
-var timerValue = 50;
+var timerValue = 120;
 let x1 = 20;
 let y1 = 270;
 let x2 = 480;
@@ -522,7 +522,7 @@ function rounds(){
     if(0<b<9){
       b=b++;
       a = goalset[b++];
-      timerValue = 10;
+      timerValue = 120;
   } 
     else{
       b=0;
