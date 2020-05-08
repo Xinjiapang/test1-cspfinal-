@@ -629,7 +629,7 @@ print("answer2",answer2);
         
 if (player1Match==true && player2Match==true){
 j++;
-timeValue == 0;
+timeValue = 0;
 player1Match = false;
 player2Match = false;
 }
