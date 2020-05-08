@@ -624,8 +624,8 @@ print("player1Match",player1Match);
 print("player2Match",player2Match);
 print(classifiedposes[0]);
 print(classifiedOtherPlayerPoses[0]);
-print(answer1);
-print(answer2);
+print("answer1",answer1);
+print("answer2",answer2);
         
 if (player1Match==true && player2Match==true){
 j++;
