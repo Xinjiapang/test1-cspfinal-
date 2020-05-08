@@ -656,51 +656,51 @@ function twopeople() {
       s1.display();
     }
 
-    if (p1pose.label == 'i') {
+    if (p1pose.label == "i") {
       let s2 = new shape(30, 290, "I", 20);
       s2.display();
     }
-    if (p2pose.label == 'i') {
+    if (p2pose.label == "i") {
       let s2 = new shape(490, 290, "I", 20);
       s2.display();
     }
 
-    if (p1pose.label == 'a') {
+    if (p1pose.label == "a") {
       let s3 = new shape(30, 290, "A", 20);
       s3.display();
     }
-    if (p2pose.label == 'a') {
+    if (p2pose.label == "a") {
       let s3 = new shape(490, 290, "A", 20);
       s3.display();
     }
 
-    if (p1pose.label == 'o') {
+    if (p1pose.label == "o") {
       let s4 = new shape(30, 290, "O", 20);
       s4.display();
     }
 
-    if (p2pose.label == 'o') {
+    if (p2pose.label == "o") {
 
       let s4 = new shape(490, 290, "O", 20);
       s4.display();
     }
 
-    if (p1pose.label == 'l') {
+    if (p1pose.label == "l") {
       let s5 = new shape(30, 290, "L", 20);
       s5.display();
     }
 
-    if (p2pose.label == 'l') {
+    if (p2pose.label == "l") {
       let s5 = new shape(490, 290, "L", 20);
       s5.display();
     }
 
-    if (p1pose.label == 'f') {
+    if (p1pose.label == "f") {
       let s6 = new shape(30, 290, "F", 20);
       s6.display();
     }
 
-    if (p2pose.label == 'f') {
+    if (p2pose.label == "f") {
       let s6 = new shape(490, 290, "F", 20);
       s6.display();
   }
