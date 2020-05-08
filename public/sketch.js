@@ -628,6 +628,7 @@ print("answer2",answer2);
 if (player1Match==true && player2Match==true){
 timeValue = 0;
 j++
+print("timeValue",timeValue);
 player1Match = false;
 player2Match = false;
 }
