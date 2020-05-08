@@ -613,26 +613,25 @@ var player2Match = false;
     var p1pose = classifiedOtherPlayerPoses[0];
     var p2pose = classifiedposes[0];  
   }
-if (p1pose.label == answer1.shape){
-player1Match = true;
-} else player1Match = false;
-if (p2pose.label == answer2.shape){
-player2Match = true;
-} else player2Match = false;
         
+if (p1pose.label == answer1.shape && p2pose.label == answer2.shape){
+player1Match = true;
+player2Match = true;
+//info
 print("player1Match",player1Match);
 print("player2Match",player2Match);
 print(classifiedposes[0]);
 print(classifiedOtherPlayerPoses[0]);
 print("answer1",answer1);
 print("answer2",answer2);
-        
+// info
 if (player1Match==true && player2Match==true){
 timeValue = 0;
 j++
 player1Match = false;
 player2Match = false;
 }
+} 
 } 
 }
 }
