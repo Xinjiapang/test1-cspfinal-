@@ -627,7 +627,7 @@ print(classifiedOtherPlayerPoses[0]);
 print("answer1",answer1);
 print("answer2",answer2);
         
-if (player1Match==true && player2Match==true){
+if (player1Match && player2Match){
 j++;
 timeValue=0;
 player1Match = false;
