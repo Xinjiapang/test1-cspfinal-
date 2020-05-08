@@ -437,11 +437,11 @@ function modelLoaded() {
 
 function frame() {
   // ----
-  for (x = 450; x < width - 50; x += s * 2) {
-    fill(250, 180, 210);
-    noStroke();
-    heart(x + s, 40, s);
-  }
+//   for (x = 450; x < width - 50; x += s * 2) {
+//     fill(250, 180, 210);
+//     noStroke();
+//     heart(x + s, 40, s);
+//   }
 
   textSize(16);
   fill(255);
@@ -465,6 +465,7 @@ function frame() {
   noStroke();
   text('SCORE', 110, 40);
   text(j,180,40);
+  text("/10",230,40);
 
   stroke(126);
   line(90, 20, 90, 75);
@@ -546,13 +547,13 @@ function timeIt() {
   }
 }
 
-function heart(x, y, size) {
-  beginShape();
-  vertex(x, y);
-  bezierVertex(x - size / 2, y - size / 3, x - size, y + size / 3, x, y + size);
-  bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 3, x, y);
-  endShape(CLOSE);
-}
+// function heart(x, y, size) {
+//   beginShape();
+//   vertex(x, y);
+//   bezierVertex(x - size / 2, y - size / 3, x - size, y + size / 3, x, y + size);
+//   bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 3, x, y);
+//   endShape(CLOSE);
+// }
 
 function people1() {
 
