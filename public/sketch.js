@@ -613,11 +613,11 @@ var player2Match = false;
     var p1pose = classifiedOtherPlayerPoses[0];
     var p2pose = classifiedposes[0];  
   }
-if (p1pose.label == answer1){
+if (p1pose.shape == answer1){
 player1Match = true;
 }
 
-if (p2pose.label == answer2){
+if (p2pose.shape == answer2){
 player2Match = true;
 }
 print("player1Match",player1Match);
