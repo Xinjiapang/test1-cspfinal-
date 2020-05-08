@@ -628,8 +628,10 @@ print("answer1",answer1);
 print("answer2",answer2);
         
 if (player1Match==true && player2Match==true){
-j++;
 timeValue = 0;
+}
+if (timerValue == 0) {
+j++; 
 player1Match = false;
 player2Match = false;
 }
