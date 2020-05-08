@@ -620,7 +620,8 @@ player1Match = true;
 if (p2pose.label == answer2){
 player2Match = true;
 }
-print("player1Match","player2Match");
+print("player1Match",player1Match);
+print("player2Match",player2Match);
 print(classifiedposes[0]);
 print(classifiedOtherPlayerPoses[0]);
 print(answer1);
