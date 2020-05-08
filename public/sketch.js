@@ -626,9 +626,9 @@ print("answer1",answer1);
 print("answer2",answer2);
 // info
 if (player1Match==true && player2Match==true){
-timeValue = 0;
+timerValue = 0;
 j++
-print("timeValue",timeValue);
+print("timerValue",timerValue);
 player1Match = false;
 player2Match = false;
 }
